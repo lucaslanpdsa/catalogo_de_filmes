@@ -11,5 +11,7 @@ class Favorite extends Model
         'movie_id',
         'title',
         'poster_path',
+        'release_date',
+        'vote_average',
     ];
 }

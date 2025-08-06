@@ -21,6 +21,8 @@ class FavoriteController extends Controller
                 'movie_id' => 'required|integer|unique:favorites,movie_id',
                 'title' => 'required|string',
                 'poster_path' => 'nullable|string',
+                'release_date' => 'nullable|date',
+                'vote_average' => 'nullable|numeric',
             ]);
 
             $favorite = Favorite::create($validated);
