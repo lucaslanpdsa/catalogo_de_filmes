@@ -27,6 +27,12 @@ docker compose up -d --build
 docker compose exec app php artisan migrate
 ```
 
+## Principais arquivos
+
+- `Http/Controllers/Api/FavoriteController.php`: Controller de favoritos
+- `app/Models/Favorite.php`: Model de favoritos
+- `routes/api.php`: Rotas da api
+
 ## Endpoints
 
 - `GET /api/favorites`: Lista filmes (com filtros por genero, barra de pesquisa e possibilidade de favoritar).
