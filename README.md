@@ -15,11 +15,6 @@ cd catalogo_de_filmes
 ```bash
 cp .env.example .env
 ```
-3. Configure as variáveis do banco de dados no `.env`:
-```env
-DB_CONNECTION=sqlite
-DB_DATABASE=/caminho/absoluto/para/database.sqlite
-```
 
 ## Executando o projeto
 
@@ -37,3 +32,4 @@ docker compose exec app php artisan migrate
 - `GET /api/favorites`: Lista filmes (com filtros por genero, barra de pesquisa e possibilidade de favoritar).
 - `POST /api/favorites`: Recebe os dados de um filme que será adicionado aos favoritos.
 - `DELETE /api/favorites/{id}`: Deleta um filme pelo seu id.
+
