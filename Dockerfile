@@ -16,11 +16,9 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 
 WORKDIR /var/www/html
 
-COPY composer.json composer.lock ./
+COPY . .
 
 RUN composer install --no-interaction --optimize-autoloader
-
-COPY . .
 
 RUN cp .env.example .env
 RUN php artisan key:generate
@@ -33,4 +31,4 @@ CMD sh -c '\
   mkdir -p /usr/share/nginx/database && \
   [ -f /usr/share/nginx/database/database.sqlite ] || touch /usr/share/nginx/database/database.sqlite && \
   php artisan migrate --force && \
-  php-fpm
+  php-fpm'
