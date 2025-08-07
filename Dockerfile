@@ -30,5 +30,4 @@ EXPOSE 9000
 CMD sh -c '\
   mkdir -p /usr/share/nginx/database && \
   [ -f /usr/share/nginx/database/database.sqlite ] || touch /usr/share/nginx/database/database.sqlite && \
-  php artisan migrate --force && \
   php-fpm'
