@@ -39,3 +39,8 @@ docker compose exec app php artisan migrate
 - `POST /api/favorites`: Recebe os dados de um filme que será adicionado aos favoritos.
 - `DELETE /api/favorites/{id}`: Deleta um filme pelo seu id.
 
+<details>
+ <summary>Video mostrando como rodar o projeto no local</summary>
+ https://www.veed.io/view/985bd424-fa8b-42a8-9c00-108f10665041?panel=share
+</details>
+
